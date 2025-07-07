@@ -1,0 +1,387 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rushikesh's Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f2f4f8, #e0e7ff);
+      color: #3b20b3;
+    }
+
+    /* Navigation Bar Styles */
+    nav {
+      background: linear-gradient(135deg, #b91d85, #a3d42f);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(161, 27, 27, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-weight: 600;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 15px 0;
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      color: #e0e7ff;
+      transform: translateY(-2px);
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    header {
+      background: linear-gradient(135deg, #b91d85, #a3d42f);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #0d47a1;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #0d47a1;
+    }
+
+    #projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project {
+      flex: 1 1 300px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .project img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .project h3 {
+      color: #1976d2;
+      margin: 10px 0 5px;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #1976d2;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .project a:hover {
+      background: #0d47a1;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    #contact a {
+      color: #0d47a1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: linear-gradient(to right, #c4ba2c, #ca3bc3);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    i {
+      margin-right: 8px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-card h3 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      #projects {
+        flex-direction: column;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: linear-gradient(135deg, #b91d85, #a3d42f);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transition: all 0.5s ease;
+      }
+      
+      .nav-links.active {
+        left: 0;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo"></a>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home" data-aos="zoom-in">
+    <h1>Hi, I'm rushikesh</h1>
+    <p>Web Development | Artificial Intelligence & Machine Learning | AI Enthusiast</p>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>About Me (Updated)
+I'm a web developer and AIML (Artificial Intelligence & Machine Learning) student who enjoys creating interactive, user-friendly web experiences.
+ I specialize in HTML, CSS, and python modern frameworks. Passionate about AI-driven projects,
+  I also specialize in Digital Marketing & SEO are basic information.
+  My goal is to build smart, scalable, and search-optimized digital solutions by combining tech and marketing strategies.</p>
+
+<p>Key Highlights:
+✅ Web Dev + AI/ML 
+✅ SEO & Digital Marketing basic information</p>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="images/weather-app.jpg" alt="Weather App">
+      <h3>Live Weather App</h3>
+      <p>A responsive weather app using OpenWeatherMap API to display current conditions by city name.</p>
+      <a href="https://github.com/yourusername/weather-app" target="_blank"><i class="fas fa-code"></i>View Project</a>
+    </div>
+    <div class="project">
+      <img src="images/task-manager.jpg" alt="Task Manager">
+      <h3>Task Manager</h3>
+      <p>Organize tasks with this JS-based app using local storage. Add, remove, and mark tasks complete.</p>
+      <a href="https://github.com/yourusername/task-manager" target="_blank"><i class="fas fa-code"></i>View Project</a>
+    </div>
+    <div class="project">
+      <img src="images/portfolio.jpg" alt="Portfolio">
+      <h3>Personal Portfolio</h3>
+      <p>Personal Portfolio Website
+A responsive portfolio built with HTML, CSS, and Python , showcasing my projects, skills, and contact information. 
+Designed to reflect my expertise in web development, AI/ML, and digital marketing with a clean, user-friendly interface.</p>
+
+<P>Features:
+
+Project gallery with descriptions,
+
+SEO-optimized performance,
+
+Contact form integration.</p>
+      <a href="https://your-portfolio-link.com" target="_blank"><i class="fas fa-link"></i>Visit Site</a>
+    </div>
+  </section>
+
+   <!-- Skills Section -->
+    <section class="skills" id="skills" data-aos="fade-up">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Data analysis, machine learning, and backend development</p>
+            </div>
+            <div class="skill-card">
+                <h3>Machine Learning</h3>
+                <p>Supervised and unsupervised learning algorithms</p>
+            </div>
+            <div class="skill-card">
+                <h3>HTML/CSS</h3>
+                <p>Modern web development and responsive design</p>
+            </div>
+            <div class="skill-card">
+                <h3>Git</h3>
+                <p>Version control and collaborative development</p>
+            </div>
+            <div class="skill-card">
+                <h3>TensorFlow</h3>
+                <p>Deep learning and neural network frameworks</p>
+            </div>
+        </div>
+    </section>
+
+  <section id="education" data-aos="fade-up">
+    <h2> Education</h2>
+    <ul>
+      <li><strong> Machine Learning</strong> – CodeTech Pvt Ltd ( 2028 –  2028)</li>
+      <li>B.Tech in Artificial Intelligence & Machine Learning – XYZ University (2024 - 2028)</li>
+      <li>HSC – ABC Junior College (2022 - 2024)</li>
+    </ul>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i><a href="mailto:rushikeshbarhate@gmail.com">rushikeshbarhate@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i>+91 9876543210</p>
+    <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/yourprofile" target="_blank">https://www.linkedin.com/in/rushikesh-barhate</a></p>
+    <p><i class="fab fa-github"></i><a href="https://github.com/yourusername" target="_blank">github.com/rushikeshbarhate</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rushikesh Barhate. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
