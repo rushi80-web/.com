@@ -1,0 +1,22 @@
+{
+  "name": "Rushikesh's Portfolio",
+  "short_name": "Portfolio",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f2f4f8",
+  "theme_color": "#b91d85",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
