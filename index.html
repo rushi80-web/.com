@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rushikesh Barhate</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log("✅ Service Worker registered:", reg.scope))
+          .catch(err => console.log("❌ Service Worker registration failed:", err));
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">Rushikesh Barhate</a>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+         <li><a href="#resume"><i class="fas fa-graduation-cap"></i>Resume</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home" data-aos="zoom-in">
+    <h2>Portfolio </h2>
+    <p>Web Development | Artificial Intelligence | Machine Learning | Data Science | Digital Marketing</p>
+  </header>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m Rushikesh Barhate, a second-year student specializing in Artificial Intelligence and Machine Learning (AIML). I am passionate about exploring emerging technologies and how they can be applied to solve real-world challenges.</p>
+    <p>With a strong foundation in HTML, CSS, and Python, and basic knowledge of Digital Marketing and SEO, I enjoy building interactive and user-friendly web experiences.</p>
+    <p>My goal is to create smart, scalable, and search-optimized solutions by blending technical and marketing strategies.</p>
+    <p>I have a deep interest in Artificial Intelligence and Data Science, and I love collaborating with peers on innovative projects. Outside of academics, I enjoy reading, coding, and playing sports — helping me stay balanced and motivated.</p>
+    <p>✅ Web Dev + AI/ML &nbsp; ✅ SEO & Digital Marketing (basic)</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p>I enjoy building smart, responsive web applications. Below are some of my key projects that demonstrate my skills in frontend development, API integration, and SEO optimization.</p>
+
+    <div class="project">
+      <h3>Live Weather App</h3>
+      <p>This responsive web app uses the OpenWeatherMap API to fetch and display real-time weather data based on user location or search input. Built using HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/yourusername/weather-app" target="_blank"><i class="fas fa-code"></i> View Code</a>
+    </div>
+
+    <div class="project">
+      <h3>Task Manager</h3>
+      <p>A simple yet effective task organizer that uses local storage to add, remove, and track task completion. Built with vanilla JavaScript and styled for responsive design.</p>
+      <a href="https://github.com/yourusername/task-manager" target="_blank"><i class="fas fa-code"></i> View Code</a>
+    </div>
+
+    <div class="project">
+      <h3>Personal Portfolio</h3>
+      <p>A clean and SEO-optimized personal portfolio website built using HTML, CSS, and Python backend. Features a contact form and project showcase section with mobile responsiveness.</p>
+      <a href="https://rushi80-web.netlify.app/" target="_blank"><i class="fas fa-link"></i> Visit Site</a>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" data-aos="fade-right">
+    <h2>Resume</h2>
+    <p>You can view or download my resume from the link below:</p>
+    <a href="C:/Users/Admin/Desktop/rushikesh barhate1202/rushi barhate new.resume[1].pdf" class="btn" target="_blank">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills" data-aos="fade-up">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>Python</h3><p>Data analysis, ML, backend development</p></div>
+      <div class="skill-card"><h3>Machine Learning</h3><p>Supervised, Unsupervised algorithms</p></div>
+      <div class="skill-card"><h3>Deep Learning</h3><p>Neural networks, CNN, RNN</p></div>
+      <div class="skill-card"><h3>TensorFlow</h3><p>Model building, training, deployment</p></div>
+      <div class="skill-card"><h3>HTML/CSS</h3><p>Responsive web design</p></div>
+      <div class="skill-card"><h3>Git & GitHub</h3><p>Version control and collaboration</p></div>
+      <div class="skill-card"><h3>Data Visualization</h3><p>Matplotlib, Seaborn, charts</p></div>
+      <div class="skill-card"><h3>Digital Marketing</h3><p>SEO, Social Media, Content Strategy</p></div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" data-aos="fade-up">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>AI & ML</strong> – CodeTech Pvt Ltd (2029)</li>
+      <li>B.Tech (AI & ML) – XYZ University (2024–2028)</li>
+      <li>HSC – ABC Junior College (2022–2024)</li>
+    </ul>
+  </section>
+  <!-- AI Tools I Use -->
+<section id="ai-tools" data-aos="fade-up">
+  <h2>AI Tools I Use</h2>
+  <p>Here are some of the AI tools and platforms I frequently use for development, learning, and productivity.</p>
+  
+  <div class="tools-grid">
+    <div class="tool-card" data-aos="zoom-in"><strong>ChatGPT</strong> – AI writing & coding assistant</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Google Colab</strong> – Python notebook for ML & DL</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>TensorFlow</strong> – Deep learning framework</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Scikit-Learn</strong> – ML algorithms toolkit</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Jupyter Notebook</strong> – Interactive code environment</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>GitHub Copilot</strong> – AI code assistant</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Hugging Face</strong> – Pretrained AI models</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Canva</strong> – Design with AI support</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Pandas</strong> – Data analysis library</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>NumPy</strong> – Numerical computing</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Midjourney</strong> – AI image generation</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>DALL·E</strong> – AI art generation</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Notion AI</strong> – Task & knowledge automation</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Runway ML</strong> – AI video editing tools</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>DeepSeek</strong> – Code-focused AI assistant</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Gemini (Google AI)</strong> – Multimodal AI by Google</div>
+    <div class="tool-card" data-aos="zoom-in"><strong>Grok (xAI)</strong> – Conversational AI by Elon Musk</div>
+  </div>
+</section>
+
+
+
+  <!-- Certifications -->
+  <section id="certifications" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <ul>
+      <li><strong>Homi Bhabha Balvaidnyanik Competition</strong> – Science Talent Exam (State Level) – <em>2019</em></li>
+      <li><strong>Drawing Examination</strong> – Government of Maharashtra – <em>2016</em></li>
+      <li><strong>College Coding Competition</strong> – Zeal Institute Tech Fest – <em>2025</em></li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:rushikeshbarhate076@gmail.com">rushikeshbarhate076@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> +91 9322484308</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/rushikesh-barhate-b9607a2a2" target="_blank">linkedin.com/in/rushikesh-barhate</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/rushi80-web" target="_blank">github.com/rushi80-web</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; Thanks you</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
